@@ -16,7 +16,7 @@
         
         <div class="form-group">
             <label for="title">Title:</label>
-            <input type="text" id="title" placeholder="Enter bingo card title" value="Kibu Bingo">
+            <input type="text" id="title" placeholder="Enter bingo card title" value="Kibu Bingo" maxlength="50">
         </div>
         
         <div class="form-group">
@@ -28,7 +28,7 @@
         
         <div class="form-group">
             <label for="cardCount">Number of unique cards:</label>
-            <input type="number" id="cardCount" min="1" max="100" value="10">
+            <input type="number" id="cardCount" min="1" max="200" value="10" oninput="javascript: if (this.value.length > 3) this.value = this.value.slice(0, 3);">
         </div>
         
         <button id="downloadBtn">Download PDF</button>
